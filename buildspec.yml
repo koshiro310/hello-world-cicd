@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Install phase - nothing to install for static HTML"
+  
+  pre_build:
+    commands:
+      - echo "Pre-build phase"
+      - echo "Build started on `date`"
+  
+  build:
+    commands:
+      - echo "Build phase - preparing files"
+      - ls -la
+  
+  post_build:
+    commands:
+      - echo "Post-build phase"
+      - echo "Build completed on `date`"
+
+artifacts:
+  files:
+    - '**/*'
+  name: hello-world-build
